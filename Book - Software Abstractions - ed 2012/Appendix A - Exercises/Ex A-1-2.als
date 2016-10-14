@@ -64,6 +64,12 @@ assert ReformulateInjective2 {
 }
 check ReformulateInjective2
 
+assert ReformulateInjective3 {
+	all r: univ -> univ |
+		(r.~r in iden) iff (all x: univ | lone r.x)
+}
+check ReformulateInjective3
+
 assert ReformulateTotal {
 	all r: univ -> univ |
 		(univ in r.univ) iff (all x: univ | some y: univ | x->y in r)
