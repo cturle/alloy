@@ -27,6 +27,8 @@ pred directed_ring [R: Node->Node] {
   some R    -- non empty
   no R & ~R -- directed, irreflexive
   let DOMAIN = (dom[R]+ran[R]) |
-  {  all N: DOMAIN | one N.R && one R.N }
+  {  all N: DOMAIN | one N.R && one R.N
+     all n1, n2: DOMAIN | n1 in n2.*R -- strongly connected
+  }
 }
 run directed_ring for 0 but exactly 4 Node
