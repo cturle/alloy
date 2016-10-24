@@ -10,7 +10,7 @@ one sig AppelDeCot
   periodes_assurance: set PeriodeAssurance
 }
 
-one sig Contrat
+sig Contrat
 {
 	date_echeance: Date
   date_etab: Date
@@ -41,4 +41,5 @@ check
 	enoncé_cas1[] => résultat_cas1[]
   -- other cases
 } for 0
+
 
