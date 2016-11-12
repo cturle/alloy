@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="C"/>
+   <type name="E"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<edge layout="yes">
+   <relation name="all_isas_attr"> <type name="E"/> <type name="C"/> </relation>
+   <relation name="genls"> <type name="C"/> <type name="C"/> </relation>
+   <relation name="isas"> <type name="E"/> <type name="C"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
