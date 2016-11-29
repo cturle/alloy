@@ -95,7 +95,9 @@ run
 {
   let T = Ternary.r, B = Binary.r |
   {
-    T in (SubE <: B) -> one E3 && !
+    --T in (SubE <: B) -> one E3 && !
+    select12[T] = (SubE <: B)
+    all x1:E, x2:E2 | one T[x1, x2] && !
     {
       select12[T] = (SubE <: B)
       all x1: E, x2: E2 | x1->x2 in select12[T] => assert5_2[T, x1, x2]

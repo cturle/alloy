@@ -10,12 +10,8 @@ sig NiveauFranchise
 
 pred NiveauFranchise.est_valide
 {
-  -- works only with halo0.2 not alloy_4.2 (seems buggy)
-  this.garanties in (this.produit.garanties <: types_risque) -> one ValeurFranchise
-  --select12[this.garanties] = (this.produit.garanties <: types_risque)
-  --this.garanties in (Garantie -> TypeRisque) -> lone ValeurFranchise
-  --all G: this.produit.garanties_hors_options, TR: G.types_risque | one this.garanties[G, TR]
-  --ii1[this.produit.garanties_hors_options <: this.garanties]
+  select12[this.garanties] = (this.produit.garanties <: types_risque)
+  all G: this.produit.garanties_hors_options, TR: TypeRisque | one this.garanties[G, TR]
 }
 
 sig Produit
