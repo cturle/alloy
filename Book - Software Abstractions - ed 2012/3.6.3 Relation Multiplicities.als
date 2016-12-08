@@ -1,4 +1,6 @@
--- 3.6.3 Relation Multiplicities, regression 4.1 => 4.2
+-- 3.6.3 Relation Multiplicities, regression 4.2 (4.1 ok)
+-- fixed with "alloy4.2_2013-01-28.jar" build
+-- cf http://stackoverflow.com/questions/14560589/semantic-change-in-4-2/14567167#14567167
 
 sig Book {}
 sig Name {}
